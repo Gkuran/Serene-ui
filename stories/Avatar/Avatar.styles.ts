@@ -1,19 +1,20 @@
 import { StyleSheet } from 'react-native';
+import { theme } from '../../theme';
 
 export const styles = StyleSheet.create({
   container: {
     position: 'relative',
   },
   image: {
-    borderRadius: 999,
+    borderRadius: theme.borderRadius.full,
   },
   statusIndicator: {
     position: 'absolute',
     bottom: 2,
     right: 2,
-    borderRadius: 999,
+    borderRadius: theme.borderRadius.full,
     borderWidth: 2,
-    borderColor: '#FFFFFF',
+    borderColor: theme.colors.white,
   },
   small: {
     width: 32,
@@ -36,7 +37,7 @@ export const statusStyles = {
 };
 
 export const statusColors = {
-  online: '#4ECDC4',
-  away: '#FFE66D',
-  offline: '#95A5A6',
+  online: '#4CAF50',
+  away: '#FF9800',
+  offline: '#9E9E9E',
 };

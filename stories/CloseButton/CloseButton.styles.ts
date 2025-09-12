@@ -1,13 +1,14 @@
 import { StyleSheet } from 'react-native';
+import { theme } from '../../theme';
 
 export const styles = StyleSheet.create({
   button: {
-    borderRadius: 999,
+    borderRadius: theme.borderRadius.full,
     alignItems: 'center',
     justifyContent: 'center',
   },
   icon: {
-    fontWeight: '300',
+    fontWeight: theme.fontWeight.light,
     lineHeight: 1,
   },
 });
@@ -19,19 +20,19 @@ export const sizeStyles = {
 };
 
 export const textSizeStyles = {
-  small: { fontSize: 16 },
-  medium: { fontSize: 20 },
-  large: { fontSize: 24 },
+  small: { fontSize: theme.fontSize.md },
+  medium: { fontSize: theme.fontSize.xl },
+  large: { fontSize: theme.fontSize.xxl },
 };
 
 export const variantStyles = {
-  default: { backgroundColor: '#F8F9FA' },
+  default: { backgroundColor: theme.colors.background },
   light: { backgroundColor: 'rgba(255, 255, 255, 0.9)' },
-  dark: { backgroundColor: 'rgba(0, 0, 0, 0.1)' },
+  dark: { backgroundColor: 'rgba(204, 68, 68, 0.1)' },
 };
 
 export const textVariantStyles = {
-  default: { color: '#95A5A6' },
-  light: { color: '#95A5A6' },
-  dark: { color: '#2C3E50' },
+  default: { color: theme.colors.textSecondary },
+  light: { color: theme.colors.textSecondary },
+  dark: { color: theme.colors.textPrimary },
 };

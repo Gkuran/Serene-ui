@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
+import { useState } from 'react';
 import { View } from 'react-native';
 import { Checkbox } from './Checkbox';
 
@@ -14,30 +14,46 @@ const meta = {
     ),
   ],
   tags: ['autodocs'],
-  args: {
-    onPress: fn(),
-  },
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    label: 'Aceito os termos',
+  render: () => {
+    const [checked, setChecked] = useState(false);
+    return (
+      <Checkbox
+        label="Aceito os termos"
+        checked={checked}
+        onPress={setChecked}
+      />
+    );
   },
 };
 
 export const Checked: Story = {
-  args: {
-    checked: true,
-    label: 'Aceito os termos',
+  render: () => {
+    const [checked, setChecked] = useState(true);
+    return (
+      <Checkbox
+        label="Aceito os termos"
+        checked={checked}
+        onPress={setChecked}
+      />
+    );
   },
 };
 
 export const WithoutLabel: Story = {
-  args: {
-    checked: false,
+  render: () => {
+    const [checked, setChecked] = useState(false);
+    return (
+      <Checkbox
+        checked={checked}
+        onPress={setChecked}
+      />
+    );
   },
 };
 

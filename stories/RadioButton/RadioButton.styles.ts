@@ -6,28 +6,28 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  checkbox: {
+  radio: {
     width: 20,
     height: 20,
-    borderRadius: theme.borderRadius.sm,
+    borderRadius: theme.borderRadius.full,
     borderWidth: 2,
     borderColor: theme.colors.primary,
     backgroundColor: theme.colors.white,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  checked: {
-    backgroundColor: theme.colors.primary,
+  selected: {
     borderColor: theme.colors.primary,
   },
   disabled: {
     borderColor: theme.colors.border,
     backgroundColor: theme.colors.background,
   },
-  checkmark: {
-    color: theme.colors.white,
-    fontSize: theme.fontSize.sm,
-    fontWeight: theme.fontWeight.bold,
+  dot: {
+    width: 10,
+    height: 10,
+    borderRadius: theme.borderRadius.full,
+    backgroundColor: theme.colors.primary,
   },
   label: {
     marginLeft: theme.spacing.sm,

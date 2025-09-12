@@ -1,51 +1,52 @@
 import { StyleSheet } from 'react-native';
+import { theme } from '../../theme';
 
 export const styles = StyleSheet.create({
   button: {
     borderWidth: 0,
-    borderRadius: 12,
-    shadowColor: '#000',
+    borderRadius: theme.borderRadius.lg,
+    shadowColor: theme.shadow.color,
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 2,
+    shadowOpacity: theme.shadow.opacity,
+    shadowRadius: theme.shadow.radius,
+    elevation: theme.shadow.elevation,
   },
   primary: {
-    backgroundColor: '#FF6B6B',
+    backgroundColor: theme.colors.primary,
   },
   primaryText: {
-    color: '#FFFFFF',
-    fontWeight: '600',
+    color: theme.colors.white,
+    fontWeight: theme.fontWeight.semibold,
   },
   secondary: {
-    backgroundColor: '#FFF5F5',
-    borderColor: '#FF6B6B',
+    backgroundColor: theme.colors.primaryBg,
+    borderColor: theme.colors.primary,
     borderWidth: 1.5,
   },
   secondaryText: {
-    color: '#FF6B6B',
-    fontWeight: '600',
+    color: theme.colors.primary,
+    fontWeight: theme.fontWeight.semibold,
   },
   small: {
-    paddingVertical: 8,
-    paddingHorizontal: 16,
+    paddingVertical: theme.spacing.sm,
+    paddingHorizontal: theme.spacing.lg,
   },
   smallText: {
-    fontSize: 14,
+    fontSize: theme.fontSize.sm,
   },
   medium: {
-    paddingVertical: 12,
-    paddingHorizontal: 24,
+    paddingVertical: theme.spacing.md,
+    paddingHorizontal: theme.spacing.xxl,
   },
   mediumText: {
-    fontSize: 16,
+    fontSize: theme.fontSize.md,
   },
   large: {
-    paddingVertical: 16,
-    paddingHorizontal: 32,
+    paddingVertical: theme.spacing.lg,
+    paddingHorizontal: theme.spacing.xxxl,
   },
   largeText: {
-    fontSize: 18,
+    fontSize: theme.fontSize.lg,
   },
 });
 

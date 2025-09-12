@@ -1,5 +1,6 @@
 import { Text, TextInput, View } from "react-native";
 import { styles } from './FormControl.styles';
+import { theme } from '../../theme';
 
 export interface FormControlProps {
   /** Label do campo */
@@ -41,11 +42,9 @@ export const FormControl = ({
         value={value}
         onChangeText={onChangeText}
         secureTextEntry={secureTextEntry}
-        placeholderTextColor="#95A5A6"
+        placeholderTextColor={theme.colors.textSecondary}
       />
       {error && <Text style={styles.errorText}>{error}</Text>}
     </View>
   );
 };
-
-
