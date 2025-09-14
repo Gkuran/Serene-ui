@@ -3,51 +3,51 @@ import { StyleSheet, Text, View } from "react-native";
 
 const ColorPalette = () => {
   const colors = [
-    { name: "Primary", value: "#FF6B6B", description: "Cor principal do Huma" },
+    { name: "Primary", value: "#66BB6A", description: "Cor principal do Huma" },
     {
       name: "Primary Dark",
-      value: "#E55555",
+      value: "#4CAF50",
       description: "Versão escura do primário",
     },
     {
       name: "Primary Light",
-      value: "#FF9999",
+      value: "#81C784",
       description: "Versão clara do primário",
     },
     {
       name: "Primary Soft",
-      value: "#FFB3B3",
+      value: "#A5D6A7",
       description: "Versão suave do primário",
     },
     {
       name: "Primary Pale",
-      value: "#FFE5E5",
+      value: "#C8E6C9",
       description: "Versão muito clara",
     },
     {
       name: "Primary Bg",
-      value: "#FFF5F5",
+      value: "#F1F8E9",
       description: "Fundo com toque primário",
     },
-    { name: "Text Primary", value: "#CC4444", description: "Texto principal" },
+    { name: "Text Primary", value: "#2E7D32", description: "Texto principal" },
     {
       name: "Text Secondary",
-      value: "#FF9999",
+      value: "#66BB6A",
       description: "Texto secundário",
     },
-    { name: "Background", value: "#FFFAFA", description: "Fundo principal" },
-    { name: "Border", value: "#FFCCCC", description: "Bordas padrão" },
-    { name: "Success", value: "#81C784", description: "Verde para sucesso" },
-    { name: "Warning", value: "#FFB74D", description: "Laranja para avisos" },
-    { name: "Error", value: "#E57373", description: "Vermelho para erros" },
-    { name: "Disabled", value: "#B0BEC5", description: "Cinza para desabilitado" },
+    { name: "Background", value: "#FAFAFA", description: "Fundo principal" },
+    { name: "Border", value: "#C8E6C9", description: "Bordas padrão" },
+    { name: "Success", value: "#4CAF50", description: "Verde para sucesso" },
+    { name: "Warning", value: "#FF9800", description: "Laranja para avisos" },
+    { name: "Error", value: "#F44336", description: "Vermelho para erros" },
+    { name: "Disabled", value: "#9E9E9E", description: "Cinza para desabilitado" },
   ];
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Paleta de Cores Huma</Text>
       <Text style={styles.subtitle}>
-        Cores quentes e acolhedoras que promovem conexão humana
+        Cores verdes e acolhedoras que promovem sustentabilidade e conexão humana
       </Text>
       <View style={styles.grid}>
         {colors.map((color) => (
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: "#FFFFFF",
     borderRadius: 12,
-    shadowColor: "#FF6B6B",
+    shadowColor: "#66BB6A",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.05,
     shadowRadius: 4,
