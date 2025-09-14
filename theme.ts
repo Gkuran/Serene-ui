@@ -11,6 +11,10 @@ export const theme = {
     background: '#FFFAFA',
     border: '#FFCCCC',
     white: '#FFFFFF',
+    success: '#81C784',
+    warning: '#FFB74D',
+    error: '#E57373',
+    disabled: '#B0BEC5',
   },
   spacing: {
     xs: 4,

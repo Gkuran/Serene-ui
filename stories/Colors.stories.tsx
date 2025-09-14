@@ -37,6 +37,10 @@ const ColorPalette = () => {
     },
     { name: "Background", value: "#FFFAFA", description: "Fundo principal" },
     { name: "Border", value: "#FFCCCC", description: "Bordas padrão" },
+    { name: "Success", value: "#81C784", description: "Verde para sucesso" },
+    { name: "Warning", value: "#FFB74D", description: "Laranja para avisos" },
+    { name: "Error", value: "#E57373", description: "Vermelho para erros" },
+    { name: "Disabled", value: "#B0BEC5", description: "Cinza para desabilitado" },
   ];
 
   return (
