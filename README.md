@@ -25,21 +25,6 @@ function App() {
 }
 ```
 
-## Components
-
-- **Accordion** - Collapsible content sections
-- **Alert** - Status and notification messages
-- **Avatar** - User profile images
-- **Box** - Layout container
-- **Button** - Interactive buttons
-- **Card** - Content containers
-- **Checkbox** - Selection inputs
-- **FormControl** - Form field wrapper
-- **Grid** - Layout grid system
-- **RadioButton** - Single selection inputs
-- **Switch** - Toggle controls
-- **Tag** - Labels and categories
-
 ## Development
 
 ```bash
@@ -55,4 +40,4 @@ npm run build
 
 ## License
 
-ISC
+MIT
