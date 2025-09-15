@@ -3,11 +3,11 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { styles } from './Accordion.styles';
 
 export interface AccordionProps {
-  /** Título do accordion */
+  /** Accordion title */
   title: string;
-  /** Conteúdo do accordion */
+  /** Accordion content */
   children: React.ReactNode;
-  /** Se o accordion inicia expandido */
+  /** If accordion starts expanded */
   defaultExpanded?: boolean;
 }
 

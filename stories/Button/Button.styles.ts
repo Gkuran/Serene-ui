@@ -3,55 +3,88 @@ import { theme } from '../../theme';
 
 export const styles = StyleSheet.create({
   button: {
-    borderWidth: 0,
-    borderRadius: theme.borderRadius.lg,
-    shadowColor: theme.shadow.color,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: theme.shadow.opacity,
-    shadowRadius: theme.shadow.radius,
-    elevation: theme.shadow.elevation,
-  },
-  primary: {
-    backgroundColor: theme.colors.primary,
-  },
-  primaryText: {
-    color: theme.colors.white,
-    fontWeight: theme.fontWeight.semibold,
-  },
-  secondary: {
-    backgroundColor: theme.colors.primaryBg,
-    borderColor: theme.colors.primary,
-    borderWidth: 1.5,
-  },
-  secondaryText: {
-    color: theme.colors.primary,
-    fontWeight: theme.fontWeight.semibold,
-  },
-  small: {
-    paddingVertical: theme.spacing.sm,
-    paddingHorizontal: theme.spacing.lg,
-  },
-  smallText: {
-    fontSize: theme.fontSize.sm,
-  },
-  medium: {
+    borderRadius: theme.borderRadius.md,
     paddingVertical: theme.spacing.md,
-    paddingHorizontal: theme.spacing.xxl,
+    paddingHorizontal: theme.spacing.lg,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
   },
-  mediumText: {
+  text: {
     fontSize: theme.fontSize.md,
+    fontWeight: theme.fontWeight.medium,
+    fontFamily: theme.fontFamily.body,
   },
-  large: {
-    paddingVertical: theme.spacing.lg,
-    paddingHorizontal: theme.spacing.xxxl,
-  },
-  largeText: {
-    fontSize: theme.fontSize.lg,
+  disabled: {
+    opacity: 0.6,
   },
 });
 
-export const textSizeStyles = {
-  small: styles.smallText,
-  medium: styles.mediumText,
-  large: styles.largeText,
+export const variantStyles = {
+  primary: {
+    button: {
+      backgroundColor: theme.colors.primary,
+    },
+    text: {
+      color: theme.colors.white,
+    },
+  },
+  secondary: {
+    button: {
+      backgroundColor: theme.colors.primaryPale,
+      borderWidth: 1,
+      borderColor: theme.colors.primary,
+    },
+    text: {
+      color: theme.colors.textPrimary,
+    },
+  },
+  outline: {
+    button: {
+      backgroundColor: 'transparent',
+      borderWidth: 1,
+      borderColor: theme.colors.primary,
+    },
+    text: {
+      color: theme.colors.primary,
+    },
+  },
+  ghost: {
+    button: {
+      backgroundColor: 'transparent',
+    },
+    text: {
+      color: theme.colors.primary,
+    },
+  },
+};
+
+export const sizeStyles = {
+  small: {
+    button: {
+      paddingVertical: theme.spacing.sm,
+      paddingHorizontal: theme.spacing.md,
+    },
+    text: {
+      fontSize: theme.fontSize.sm,
+    },
+  },
+  medium: {
+    button: {
+      paddingVertical: theme.spacing.md,
+      paddingHorizontal: theme.spacing.lg,
+    },
+    text: {
+      fontSize: theme.fontSize.md,
+    },
+  },
+  large: {
+    button: {
+      paddingVertical: theme.spacing.lg,
+      paddingHorizontal: theme.spacing.xl,
+    },
+    text: {
+      fontSize: theme.fontSize.lg,
+    },
+  },
 };

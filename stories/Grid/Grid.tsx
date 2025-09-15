@@ -3,9 +3,9 @@ import { Card, CardProps } from '../Card/Card';
 import { styles } from './Grid.styles';
 
 export interface GridProps {
-  /** Array de dados para os cards */
+  /** Array of data for cards */
   data: CardProps[];
-  /** Número de colunas */
+  /** Number of columns */
   numColumns?: 2 | 3;
 }
 

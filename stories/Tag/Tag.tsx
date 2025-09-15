@@ -2,13 +2,13 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { styles } from './Tag.styles';
 
 export interface TagProps {
-  /** Texto da tag */
+  /** Tag text */
   label: string;
-  /** Variante da tag */
+  /** Tag variant */
   variant?: 'default' | 'success' | 'warning' | 'error';
-  /** Se a tag pode ser removida */
+  /** If tag can be removed */
   removable?: boolean;
-  /** Função chamada ao remover */
+  /** Function called when removing */
   onRemove?: () => void;
 }
 

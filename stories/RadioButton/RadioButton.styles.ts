@@ -32,6 +32,7 @@ export const styles = StyleSheet.create({
   label: {
     marginLeft: theme.spacing.sm,
     fontSize: theme.fontSize.md,
+    fontFamily: theme.fontFamily.body,
     color: theme.colors.textPrimary,
   },
   labelDisabled: {

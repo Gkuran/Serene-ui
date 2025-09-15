@@ -25,6 +25,7 @@ export const styles = StyleSheet.create({
   label: {
     fontSize: theme.fontSize.sm,
     fontWeight: theme.fontWeight.medium,
+    fontFamily: theme.fontFamily.body,
   },
   defaultText: {
     color: theme.colors.textPrimary,
@@ -45,5 +46,6 @@ export const styles = StyleSheet.create({
   removeIcon: {
     fontSize: theme.fontSize.md,
     fontWeight: theme.fontWeight.bold,
+    fontFamily: theme.fontFamily.body,
   },
 });

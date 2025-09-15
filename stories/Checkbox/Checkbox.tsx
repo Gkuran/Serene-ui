@@ -2,13 +2,13 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { styles } from './Checkbox.styles';
 
 export interface CheckboxProps {
-  /** Se o checkbox está marcado */
+  /** If checkbox is checked */
   checked?: boolean;
-  /** Texto do label */
+  /** Label text */
   label?: string;
-  /** Função chamada quando o estado muda */
+  /** Function called when state changes */
   onPress?: (checked: boolean) => void;
-  /** Se o checkbox está desabilitado */
+  /** If checkbox is disabled */
   disabled?: boolean;
 }
 

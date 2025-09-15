@@ -2,13 +2,13 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { styles } from './RadioButton.styles';
 
 export interface RadioButtonProps {
-  /** Se o radio button está selecionado */
+  /** If radio button is selected */
   selected?: boolean;
-  /** Texto do label */
+  /** Label text */
   label?: string;
-  /** Função chamada quando selecionado */
+  /** Function called when selected */
   onPress?: () => void;
-  /** Se o radio button está desabilitado */
+  /** If radio button is disabled */
   disabled?: boolean;
 }
 

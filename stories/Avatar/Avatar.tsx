@@ -1,28 +1,48 @@
-import { Image, View } from 'react-native';
-import { styles, statusStyles, statusColors } from './Avatar.styles';
+import { Image, Text, View } from 'react-native';
+import { sizeStyles, statusColors, styles } from './Avatar.styles';
 
 export interface AvatarProps {
-  /** URL da imagem do usuário */
-  imageUrl: string;
-  /** Status do usuário */
-  status?: 'online' | 'away' | 'offline';
-  /** Tamanho do avatar */
+  /** Avatar size */
   size?: 'small' | 'medium' | 'large';
+  /** Image source URL */
+  src?: string;
+  /** User initials when no image */
+  initials?: string;
+  /** User status indicator */
+  status?: 'online' | 'away' | 'offline';
 }
 
 export const Avatar = ({
-  imageUrl,
-  status = 'offline',
   size = 'medium',
+  src,
+  initials,
+  status,
 }: AvatarProps) => {
-  const avatarStyle = styles[size];
-  const statusStyle = statusStyles[size];
-  const statusColor = statusColors[status];
+  const sizeStyle = sizeStyles[size];
 
   return (
-    <View style={[styles.container, avatarStyle]}>
-      <Image source={{ uri: imageUrl }} style={[styles.image, avatarStyle]} />
-      <View style={[styles.statusIndicator, statusStyle, { backgroundColor: statusColor }]} />
+    <View style={[styles.container, sizeStyle.avatar]}>
+      <View style={[styles.avatar, sizeStyle.avatar]}>
+        {src ? (
+          <Image
+            source={{ uri: src }}
+            style={[styles.image, sizeStyle.avatar]}
+          />
+        ) : (
+          <Text style={[styles.initials, sizeStyle.initials]}>
+            {initials}
+          </Text>
+        )}
+      </View>
+      {status && (
+        <View
+          style={[
+            styles.statusIndicator,
+            sizeStyle.status,
+            { backgroundColor: statusColors[status] },
+          ]}
+        />
+      )}
     </View>
   );
 };

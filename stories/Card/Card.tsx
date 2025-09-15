@@ -4,23 +4,23 @@ import { theme } from '../../theme';
 import { styles, variantStyles, paddingStyles } from './Card.styles';
 
 export interface CardProps {
-  /** Conteúdo customizado do card */
+  /** Custom card content */
   children?: ReactNode;
-  /** Variante do card */
+  /** Card variant */
   variant?: 'default' | 'elevated' | 'outlined';
-  /** Padding interno */
+  /** Internal padding */
   padding?: 'none' | 'small' | 'medium' | 'large';
-  /** URL da imagem */
+  /** Image URL */
   imageUrl?: string;
-  /** Título do card */
+  /** Card title */
   title?: string;
-  /** Descrição do card */
+  /** Card description */
   description?: string;
-  /** Data de publicação */
+  /** Publication date */
   publishDate?: string;
-  /** Status do item */
+  /** Item status */
   status?: 'available' | 'reserved' | 'delivered' | 'unavailable';
-  /** Função chamada ao pressionar o card */
+  /** Function called when pressing the card */
   onPress?: () => void;
 }
 

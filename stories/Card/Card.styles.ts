@@ -35,11 +35,13 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: theme.fontSize.lg,
     fontWeight: theme.fontWeight.semibold,
+    fontFamily: theme.fontFamily.heading,
     color: theme.colors.textPrimary,
     marginBottom: theme.spacing.sm,
   },
   description: {
     fontSize: theme.fontSize.md,
+    fontFamily: theme.fontFamily.body,
     color: theme.colors.textSecondary,
     lineHeight: 22,
     marginBottom: theme.spacing.md,
@@ -51,11 +53,13 @@ export const styles = StyleSheet.create({
   },
   date: {
     fontSize: theme.fontSize.sm,
+    fontFamily: theme.fontFamily.body,
     color: theme.colors.textSecondary,
   },
   meta: {
     fontSize: theme.fontSize.sm,
     fontWeight: theme.fontWeight.medium,
+    fontFamily: theme.fontFamily.body,
     color: theme.colors.primary,
   },
 });

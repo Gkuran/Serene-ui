@@ -28,10 +28,12 @@ export const styles = StyleSheet.create({
     color: theme.colors.white,
     fontSize: theme.fontSize.sm,
     fontWeight: theme.fontWeight.bold,
+    fontFamily: theme.fontFamily.body,
   },
   label: {
     marginLeft: theme.spacing.sm,
     fontSize: theme.fontSize.md,
+    fontFamily: theme.fontFamily.body,
     color: theme.colors.textPrimary,
   },
   labelDisabled: {
