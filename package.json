@@ -1,6 +1,6 @@
 {
   "name": "serene-ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Serene UI is a lightweight and versatile design system built for social-focused applications. It emphasizes simplicity, intuitive components, and warm, inviting colors that foster human connection and engagement. Designed for reuse across multiple projects, Serene UI helps developers create cohesive, approachable, and friendly interfaces with ease.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
