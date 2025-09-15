@@ -20,17 +20,17 @@
   },
   "keywords": [
     "design-system",
-    "react",
+    "react-native",
     "ui",
     "components",
     "social"
   ],
   "author": "Gabriel Silva Adornes",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Gkuran/Huma/issues"
+    "url": "https://github.com/Gkuran/Serene-ui/issues"
   },
-  "homepage": "https://github.com/Gkuran/Huma#readme",
+  "homepage": "https://github.com/Gkuran/Serene-ui#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
