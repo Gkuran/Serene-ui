@@ -1,15 +1,15 @@
-import { ReactNode } from 'react';
-import { Image, Text, TouchableOpacity, View } from 'react-native';
-import { theme } from '../../theme';
-import { styles, variantStyles, paddingStyles } from './Card.styles';
+import { ReactNode } from "react";
+import { Image, Text, TouchableOpacity, View } from "react-native";
+import { theme } from "../../theme";
+import { styles, variantStyles, paddingStyles } from "./Card.styles";
 
 export interface CardProps {
   /** Custom card content */
   children?: ReactNode;
   /** Card variant */
-  variant?: 'default' | 'elevated' | 'outlined';
+  variant?: "default" | "elevated" | "outlined";
   /** Internal padding */
-  padding?: 'none' | 'small' | 'medium' | 'large';
+  padding?: "none" | "small" | "medium" | "large";
   /** Image URL */
   imageUrl?: string;
   /** Card title */
@@ -19,15 +19,15 @@ export interface CardProps {
   /** Publication date */
   publishDate?: string;
   /** Item status */
-  status?: 'available' | 'reserved' | 'delivered' | 'unavailable';
+  status?: "available" | "reserved" | "delivered" | "unavailable";
   /** Function called when pressing the card */
   onPress?: () => void;
 }
 
 export const Card = ({
   children,
-  variant = 'default',
-  padding = 'medium',
+  variant = "default",
+  padding = "medium",
   imageUrl,
   title,
   description,
@@ -37,29 +37,40 @@ export const Card = ({
 }: CardProps) => {
   const variantStyle = variantStyles[variant];
   const paddingStyle = children ? paddingStyles[padding] : paddingStyles.none;
-  
-  const hasStructuredContent = imageUrl || title || description || publishDate || status;
-  
+
+  const hasStructuredContent =
+    imageUrl || title || description || publishDate || status;
+
   const getStatusText = (status?: string) => {
     switch (status) {
-      case 'available': return 'Disponível';
-      case 'reserved': return 'Reservado';
-      case 'delivered': return 'Entregue';
-      case 'unavailable': return 'Indisponível';
-      default: return status;
+      case "available":
+        return "Disponível";
+      case "reserved":
+        return "Reservado";
+      case "delivered":
+        return "Entregue";
+      case "unavailable":
+        return "Indisponível";
+      default:
+        return status;
     }
   };
-  
+
   const getStatusColor = (status?: string) => {
     switch (status) {
-      case 'available': return theme.colors.success;
-      case 'reserved': return theme.colors.warning;
-      case 'delivered': return theme.colors.disabled;
-      case 'unavailable': return theme.colors.error;
-      default: return theme.colors.primary;
+      case "available":
+        return theme.colors.success;
+      case "reserved":
+        return theme.colors.warning;
+      case "delivered":
+        return theme.colors.disabled;
+      case "unavailable":
+        return theme.colors.error;
+      default:
+        return theme.colors.primary;
     }
   };
-  
+
   const CardContent = () => (
     <View style={[styles.card, variantStyle, paddingStyle]}>
       {hasStructuredContent ? (
@@ -75,11 +86,19 @@ export const Card = ({
           </View>
           <View style={styles.content}>
             {title && <Text style={styles.title}>{title}</Text>}
-            {description && <Text style={styles.description}>{description}</Text>}
+            {description && (
+              <Text style={styles.description}>{description}</Text>
+            )}
             {(publishDate || status) && (
               <View style={styles.footer}>
                 {publishDate && <Text style={styles.date}>{publishDate}</Text>}
-                {status && <Text style={[styles.meta, { color: getStatusColor(status) }]}>{getStatusText(status)}</Text>}
+                {status && (
+                  <Text
+                    style={[styles.meta, { color: getStatusColor(status) }]}
+                  >
+                    {getStatusText(status)}
+                  </Text>
+                )}
               </View>
             )}
           </View>

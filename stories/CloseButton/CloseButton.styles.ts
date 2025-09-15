@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
   },
   icon: {
     fontWeight: theme.fontWeight.light,
-    lineHeight: 1,
+    fontFamily: theme.fontFamily.body,
   },
 });
 
@@ -20,9 +20,9 @@ export const sizeStyles = {
 };
 
 export const textSizeStyles = {
-  small: { fontSize: theme.fontSize.md },
-  medium: { fontSize: theme.fontSize.xl },
-  large: { fontSize: theme.fontSize.xxl },
+  small: { fontSize: 16, lineHeight: 16 },
+  medium: { fontSize: 20, lineHeight: 20 },
+  large: { fontSize: 24, lineHeight: 24 },
 };
 
 export const variantStyles = {
