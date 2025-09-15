@@ -1,19 +1,19 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { useState } from 'react';
-import { View } from 'react-native';
-import { Checkbox } from './Checkbox';
+import type { Meta, StoryObj } from "@storybook/react";
+import { useState } from "react";
+import { View } from "react-native";
+import { Checkbox } from "./Checkbox";
 
 const meta = {
-  title: 'Huma/Input/Checkbox',
+  title: "Serene/Atoms/Checkbox",
   component: Checkbox,
   decorators: [
     (Story) => (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Story />
       </View>
     ),
   ],
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
@@ -48,19 +48,14 @@ export const Checked: Story = {
 export const WithoutLabel: Story = {
   render: () => {
     const [checked, setChecked] = useState(false);
-    return (
-      <Checkbox
-        checked={checked}
-        onPress={setChecked}
-      />
-    );
+    return <Checkbox checked={checked} onPress={setChecked} />;
   },
 };
 
 export const Disabled: Story = {
   args: {
     disabled: true,
-    label: 'Opção desabilitada',
+    label: "Opção desabilitada",
   },
 };
 
@@ -68,6 +63,6 @@ export const DisabledChecked: Story = {
   args: {
     checked: true,
     disabled: true,
-    label: 'Opção desabilitada marcada',
+    label: "Opção desabilitada marcada",
   },
 };

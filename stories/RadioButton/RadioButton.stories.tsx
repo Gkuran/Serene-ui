@@ -3,7 +3,7 @@ import { useState } from "react";
 import { RadioButton } from "./RadioButton";
 
 const meta: Meta<typeof RadioButton> = {
-  title: "Huma/Controls/RadioButton",
+  title: "Serene/Atoms/RadioButton",
   component: RadioButton,
   parameters: {
     layout: "centered",
@@ -51,10 +51,7 @@ export const WithoutLabel: Story = {
   render: () => {
     const [selected, setSelected] = useState(true);
     return (
-      <RadioButton
-        selected={selected}
-        onPress={() => setSelected(!selected)}
-      />
+      <RadioButton selected={selected} onPress={() => setSelected(!selected)} />
     );
   },
 };

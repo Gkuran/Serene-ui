@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { View } from 'react-native';
-import { Tag } from './Tag';
+import type { Meta, StoryObj } from "@storybook/react";
+import { View } from "react-native";
+import { Tag } from "./Tag";
 
 const meta: Meta<typeof Tag> = {
-  title: 'Huma/Display/Tag',
+  title: "Serene/Atoms/Tag",
   component: Tag,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 };
 
 export default meta;
@@ -16,36 +16,36 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    label: 'Tag padrão',
+    label: "Tag padrão",
   },
 };
 
 export const Success: Story = {
   args: {
-    label: 'Sucesso',
-    variant: 'success',
+    label: "Sucesso",
+    variant: "success",
   },
 };
 
 export const Warning: Story = {
   args: {
-    label: 'Atenção',
-    variant: 'warning',
+    label: "Atenção",
+    variant: "warning",
   },
 };
 
 export const Error: Story = {
   args: {
-    label: 'Erro',
-    variant: 'error',
+    label: "Erro",
+    variant: "error",
   },
 };
 
 export const Removable: Story = {
   args: {
-    label: 'Tag removível',
+    label: "Tag removível",
     removable: true,
-    onRemove: () => alert('Tag removida!'),
+    onRemove: () => alert("Tag removida!"),
   },
 };
 
@@ -56,7 +56,7 @@ export const AllVariants: Story = {
       <Tag label="Sucesso" variant="success" />
       <Tag label="Atenção" variant="warning" />
       <Tag label="Erro" variant="error" />
-      <Tag label="Removível" removable onRemove={() => alert('Removida!')} />
+      <Tag label="Removível" removable onRemove={() => alert("Removida!")} />
     </View>
   ),
 };

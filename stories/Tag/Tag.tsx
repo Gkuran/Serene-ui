@@ -10,6 +10,8 @@ export interface TagProps {
   removable?: boolean;
   /** Function called when removing */
   onRemove?: () => void;
+  /** Function called when pressing the tag */
+  onPress?: () => void;
 }
 
 export const Tag = ({
@@ -17,8 +19,9 @@ export const Tag = ({
   variant = 'default',
   removable = false,
   onRemove,
+  onPress,
 }: TagProps) => {
-  return (
+  const TagContent = () => (
     <View style={[styles.container, styles[variant]]}>
       <Text style={[styles.label, styles[`${variant}Text`]]}>{label}</Text>
       {removable && (
@@ -28,4 +31,14 @@ export const Tag = ({
       )}
     </View>
   );
+
+  if (onPress && !removable) {
+    return (
+      <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
+        <TagContent />
+      </TouchableOpacity>
+    );
+  }
+
+  return <TagContent />;
 };

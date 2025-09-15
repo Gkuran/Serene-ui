@@ -1,19 +1,19 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
-import { View } from 'react-native';
-import { Switch } from './Switch';
+import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
+import { View } from "react-native";
+import { Switch } from "./Switch";
 
 const meta = {
-  title: 'Huma/Input/Switch',
+  title: "Serene/Atoms/Switch",
   component: Switch,
   decorators: [
     (Story) => (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Story />
       </View>
     ),
   ],
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   args: {
     onValueChange: fn(),
   },
@@ -24,14 +24,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    label: 'Notificações',
+    label: "Notificações",
   },
 };
 
 export const Active: Story = {
   args: {
     value: true,
-    label: 'Modo escuro',
+    label: "Modo escuro",
   },
 };
 
@@ -44,7 +44,7 @@ export const WithoutLabel: Story = {
 export const Disabled: Story = {
   args: {
     disabled: true,
-    label: 'Opção desabilitada',
+    label: "Opção desabilitada",
   },
 };
 
@@ -52,6 +52,6 @@ export const DisabledActive: Story = {
   args: {
     value: true,
     disabled: true,
-    label: 'Ativo mas desabilitado',
+    label: "Ativo mas desabilitado",
   },
 };

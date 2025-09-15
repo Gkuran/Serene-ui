@@ -6,7 +6,7 @@ import { View } from "react-native";
 import { Button } from "./Button";
 
 const meta = {
-  title: "Huma/Controls/Button",
+  title: "Serene/Atoms/Button",
   component: Button,
   decorators: [
     (Story) => (
@@ -27,27 +27,28 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: "Button",
+    variant: "primary",
+    title: "Button",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: "Button",
+    variant: "secondary",
+    title: "Button",
   },
 };
 
 export const Large: Story = {
   args: {
     size: "large",
-    label: "Button",
+    title: "Button",
   },
 };
 
 export const Small: Story = {
   args: {
     size: "small",
-    label: "Button",
+    title: "Button",
   },
 };

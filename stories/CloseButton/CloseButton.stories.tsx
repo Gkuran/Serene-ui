@@ -1,19 +1,19 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
-import { View } from 'react-native';
-import { CloseButton } from './CloseButton';
+import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
+import { View } from "react-native";
+import { CloseButton } from "./CloseButton";
 
 const meta = {
-  title: 'Huma/Utilities/CloseButton',
+  title: "Serene/Atoms/CloseButton",
   component: CloseButton,
   decorators: [
     (Story) => (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Story />
       </View>
     ),
   ],
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   args: {
     onPress: fn(),
   },
@@ -26,24 +26,24 @@ export const Default: Story = {};
 
 export const Small: Story = {
   args: {
-    size: 'small',
+    size: "small",
   },
 };
 
 export const Large: Story = {
   args: {
-    size: 'large',
+    size: "large",
   },
 };
 
 export const Light: Story = {
   args: {
-    variant: 'light',
+    variant: "light",
   },
 };
 
 export const Dark: Story = {
   args: {
-    variant: 'dark',
+    variant: "dark",
   },
 };
