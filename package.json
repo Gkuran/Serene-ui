@@ -4,7 +4,9 @@
   "description": "Serene UI is a lightweight and versatile design system built for social-focused applications. It emphasizes simplicity, intuitive components, and warm, inviting colors that foster human connection and engagement. Designed for reuse across multiple projects, Serene UI helps developers create cohesive, approachable, and friendly interfaces with ease.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
@@ -14,9 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gkuran/Huma.git"
+    "url": "git+https://github.com/Gkuran/Serene-ui"
   },
-  "keywords": ["design-system", "react", "ui", "components", "social"],
+  "keywords": [
+    "design-system",
+    "react",
+    "ui",
+    "components",
+    "social"
+  ],
   "author": "Gabriel Silva Adornes",
   "license": "ISC",
   "bugs": {
