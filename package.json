@@ -45,6 +45,7 @@
     "@types/react-dom": "^18.2.0",
     "@types/react-native": "^0.72.8",
     "@vitejs/plugin-react": "^4.0.0",
+    "react-native-web": "^0.21.1",
     "storybook": "^8.6.14",
     "typescript": "^5.9.2",
     "vite": "^5.0.0"
