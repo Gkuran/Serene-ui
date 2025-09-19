@@ -15,6 +15,7 @@ export { Switch } from './stories/Switch/Switch';
 export { Tag } from './stories/Tag/Tag';
 export { FilteredList } from './stories/FilteredList/FilteredList';
 export { Modal } from './stories/Modal/Modal';
+export { Stepper } from './stories/Stepper/Stepper';
 
 // Theme
 export { theme } from './theme';
@@ -25,3 +26,4 @@ export type { CardProps } from './stories/Card/Card';
 export type { FilteredListProps } from './stories/FilteredList/FilteredList';
 export type { ModalProps } from './stories/Modal/Modal';
 export type { BadgeProps } from './stories/Badge/Badge';
+export type { StepperProps, Step } from './stories/Stepper/Stepper';
