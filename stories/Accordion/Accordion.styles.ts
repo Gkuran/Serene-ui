@@ -1,37 +1,37 @@
-import { StyleSheet } from 'react-native';
-import { theme } from '../../theme';
+import { StyleSheet } from "react-native";
+import { theme } from "../../theme";
 
 export const styles = StyleSheet.create({
   container: {
     borderRadius: theme.borderRadius.md,
-    borderWidth: 1,
-    borderColor: theme.colors.border,
     backgroundColor: theme.colors.white,
-    overflow: 'hidden',
+    borderColor: theme.colors.border,
+    overflow: "hidden",
+    borderWidth: 1,
   },
   header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: theme.spacing.lg,
     backgroundColor: theme.colors.primaryBg,
+    justifyContent: "space-between",
+    padding: theme.spacing.lg,
+    flexDirection: "row",
+    alignItems: "center",
   },
   title: {
-    fontSize: theme.fontSize.md,
-    fontWeight: theme.fontWeight.medium,
     fontFamily: theme.fontFamily.heading,
+    fontWeight: theme.fontWeight.medium,
     color: theme.colors.textPrimary,
+    fontSize: theme.fontSize.md,
     flex: 1,
   },
   icon: {
-    fontSize: theme.fontSize.lg,
     fontWeight: theme.fontWeight.bold,
     fontFamily: theme.fontFamily.body,
-    color: theme.colors.primary,
     marginLeft: theme.spacing.sm,
+    fontSize: theme.fontSize.lg,
+    color: theme.colors.primary,
   },
   content: {
-    padding: theme.spacing.lg,
     backgroundColor: theme.colors.white,
+    padding: theme.spacing.lg,
   },
 });

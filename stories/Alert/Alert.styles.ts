@@ -1,19 +1,19 @@
-import { StyleSheet } from 'react-native';
-import { theme } from '../../theme';
+import { StyleSheet } from "react-native";
+import { theme } from "../../theme";
 
 export const styles = StyleSheet.create({
   container: {
-    width: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     paddingHorizontal: theme.spacing.lg,
     paddingVertical: theme.spacing.md,
     borderRadius: theme.borderRadius.md,
   },
   content: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     flex: 1,
   },
   icon: {
@@ -30,10 +30,10 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.primaryPale,
   },
   warning: {
-    backgroundColor: '#FFF3E0',
+    backgroundColor: "#FFF3E0",
   },
   error: {
-    backgroundColor: '#FFEBEE',
+    backgroundColor: "#FFEBEE",
   },
   info: {
     backgroundColor: theme.colors.primaryBg,
@@ -42,10 +42,10 @@ export const styles = StyleSheet.create({
     color: theme.colors.textPrimary,
   },
   warningText: {
-    color: '#F57C00',
+    color: "#F57C00",
   },
   errorText: {
-    color: '#C62828',
+    color: "#C62828",
   },
   infoText: {
     color: theme.colors.textPrimary,
