@@ -26,24 +26,24 @@ type Story = StoryObj<typeof meta>;
 
 const basicSteps = [
   {
-    title: "Basic Details",
-    description: "Enter your personal information",
+    title: "Detalhes Básicos",
+    description: "Insira suas informações pessoais",
   },
   {
-    title: "Company Details",
-    description: "Provide company information",
+    title: "Detalhes da Empresa",
+    description: "Forneça informações da empresa",
   },
   {
-    title: "Subscription Plan",
-    description: "Choose your plan",
+    title: "Plano de Assinatura",
+    description: "Escolha seu plano",
   },
   {
-    title: "Payment Details",
-    description: "Enter payment information",
+    title: "Detalhes de Pagamento",
+    description: "Insira informações de pagamento",
   },
   {
-    title: "Confirmation",
-    description: "Review and confirm",
+    title: "Confirmação",
+    description: "Revise e confirme",
   },
 ];
 
@@ -79,30 +79,35 @@ export const WithContent: Story = {
   args: {
     steps: [
       {
-        title: "Basic Details",
-        description: "Enter your personal information",
+        title: "Detalhes Básicos",
+        description: "Insira suas informações pessoais",
         content: (
-          <View style={{ padding: 16, backgroundColor: "#F1F8E9", borderRadius: 8 }}>
+          <View
+            style={{ padding: 16, backgroundColor: "#F1F8E9", borderRadius: 8 }}
+          >
             <Text style={{ color: "#2E7D32", fontSize: 14 }}>
-              This is the content for the Basic Details step. You can add any React Native components here.
+              Este é o conteúdo para a etapa de Detalhes Básicos. Você pode
+              adicionar qualquer componente React Native aqui.
             </Text>
           </View>
         ),
       },
       {
-        title: "Company Details",
-        description: "Provide company information",
+        title: "Detalhes da Empresa",
+        description: "Forneça informações da empresa",
         content: (
-          <View style={{ padding: 16, backgroundColor: "#E3F2FD", borderRadius: 8 }}>
+          <View
+            style={{ padding: 16, backgroundColor: "#E3F2FD", borderRadius: 8 }}
+          >
             <Text style={{ color: "#1976D2", fontSize: 14 }}>
-              Company details form would go here.
+              O formulário de detalhes da empresa iria aqui.
             </Text>
           </View>
         ),
       },
       {
-        title: "Subscription Plan",
-        description: "Choose your plan",
+        title: "Plano de Assinatura",
+        description: "Escolha seu plano",
       },
     ],
     currentStep: 0,
@@ -146,17 +151,17 @@ export const DisabledStep: Story = {
   args: {
     steps: [
       {
-        title: "Basic Details",
-        description: "Enter your personal information",
+        title: "Detalhes Básicos",
+        description: "Insira suas informações pessoais",
       },
       {
-        title: "Company Details",
-        description: "Provide company information",
+        title: "Detalhes da Empresa",
+        description: "Forneça informações da empresa",
         disabled: true,
       },
       {
-        title: "Subscription Plan",
-        description: "Choose your plan",
+        title: "Plano de Assinatura",
+        description: "Escolha seu plano",
       },
     ],
     currentStep: 0,
@@ -167,16 +172,17 @@ export const LongTitles: Story = {
   args: {
     steps: [
       {
-        title: "Very Long Step Title That Might Wrap",
-        description: "This is a longer description that explains what this step is about in more detail",
+        title: "Título de Etapa Muito Longo Que Pode Quebrar Linha",
+        description:
+          "Esta é uma descrição mais longa que explica o que esta etapa trata com mais detalhes",
       },
       {
-        title: "Another Long Title",
-        description: "Another detailed description for this step",
+        title: "Outro Título Longo",
+        description: "Outra descrição detalhada para esta etapa",
       },
       {
-        title: "Short",
-        description: "Brief",
+        title: "Curto",
+        description: "Breve",
       },
     ],
     currentStep: 1,
@@ -238,24 +244,24 @@ export const VerticalSpaced: Story = {
   args: {
     steps: [
       {
-        title: "Basic Details",
-        description: "Enter your personal information and contact details",
+        title: "Detalhes Básicos",
+        description: "Insira suas informações pessoais e detalhes de contato",
       },
       {
-        title: "Company Details",
-        description: "Provide company information and business details",
+        title: "Detalhes da Empresa",
+        description: "Forneça informações da empresa e detalhes do negócio",
       },
       {
-        title: "Subscription Plan",
-        description: "Choose the plan that best fits your needs",
+        title: "Plano de Assinatura",
+        description: "Escolha o plano que melhor atende suas necessidades",
       },
       {
-        title: "Payment Details",
-        description: "Enter your payment information securely",
+        title: "Detalhes de Pagamento",
+        description: "Insira suas informações de pagamento com segurança",
       },
       {
-        title: "Confirmation",
-        description: "Review and confirm your registration",
+        title: "Confirmação",
+        description: "Revise e confirme seu registro",
       },
     ],
     currentStep: 2,
