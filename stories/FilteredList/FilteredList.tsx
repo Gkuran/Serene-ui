@@ -1,13 +1,13 @@
-import React, { useState, useMemo } from 'react';
-import { View, Text } from 'react-native';
-import { Grid } from '../Grid/Grid';
-import { FormControl } from '../FormControl/FormControl';
-import { Switch } from '../Switch/Switch';
-import { Tag } from '../Tag/Tag';
-import { Modal } from '../Modal/Modal';
-import { Button } from '../Button/Button';
-import { CardProps } from '../Card/Card';
-import { styles } from './FilteredList.styles';
+import React, { useState, useMemo } from "react";
+import { View, Text } from "react-native";
+import { Grid } from "../Grid/Grid";
+import { FormControl } from "../FormControl/FormControl";
+import { Switch } from "../Switch/Switch";
+import { Tag } from "../Tag/Tag";
+import { Modal } from "../Modal/Modal";
+import { Button } from "../Button/Button";
+import { CardProps } from "../Card/Card";
+import { styles } from "./FilteredList.styles";
 
 export interface FilteredListProps {
   /** Array de dados para exibir */
@@ -26,19 +26,34 @@ export const FilteredList = ({
   data,
   availableTags = [],
   numColumns = 2,
-  searchPlaceholder = 'Buscar doações...',
-  sortLabel = 'Apenas disponíveis',
+  searchPlaceholder = "Buscar doações...",
+  sortLabel = "Apenas disponíveis",
 }: FilteredListProps) => {
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [showOnlyAvailable, setShowOnlyAvailable] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   const allAvailableTags = [
-    'Roupas', 'Livros', 'Móveis', 'Alimentos', 'Brinquedos', 'Eletrônicos',
-    'Utensílios', 'Decoração', 'Esportes', 'Música', 'Jogos', 'Ferramentas',
-    'Disponível', 'Reservado', 'Entregue', 'Urgente', 'Infantil', 'Adulto'
+    "Roupas",
+    "Livros",
+    "Móveis",
+    "Alimentos",
+    "Brinquedos",
+    "Eletrônicos",
+    "Utensílios",
+    "Decoração",
+    "Esportes",
+    "Música",
+    "Jogos",
+    "Ferramentas",
+    "Disponível",
+    "Reservado",
+    "Entregue",
+    "Urgente",
+    "Infantil",
+    "Adulto",
   ];
 
   const handleOpenModal = () => {
@@ -47,10 +62,8 @@ export const FilteredList = ({
   };
 
   const handleTagToggle = (tag: string) => {
-    setSelectedTags(prev => 
-      prev.includes(tag) 
-        ? prev.filter(t => t !== tag)
-        : [...prev, tag]
+    setSelectedTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
   };
 
@@ -60,28 +73,32 @@ export const FilteredList = ({
   };
 
   const removeFilter = (tag: string) => {
-    setActiveFilters(prev => prev.filter(t => t !== tag));
+    setActiveFilters((prev) => prev.filter((t) => t !== tag));
   };
 
   const filteredData = useMemo(() => {
-    let filtered = data.filter(item => {
-      const matchesSearch = !searchText || 
+    let filtered = data.filter((item) => {
+      const matchesSearch =
+        !searchText ||
         item.title?.toLowerCase().includes(searchText.toLowerCase()) ||
         item.description?.toLowerCase().includes(searchText.toLowerCase());
-      
-      const matchesTags = activeFilters.length === 0 || 
-        activeFilters.every(tag => {
+
+      const matchesTags =
+        activeFilters.length === 0 ||
+        activeFilters.every((tag) => {
           const tagLower = tag.toLowerCase();
-          return item.title?.toLowerCase().includes(tagLower) ||
-                 item.description?.toLowerCase().includes(tagLower) ||
-                 item.status?.toLowerCase().includes(tagLower) ||
-                 (tagLower === 'disponível' && item.status === 'available') ||
-                 (tagLower === 'reservado' && item.status === 'reserved') ||
-                 (tagLower === 'entregue' && item.status === 'delivered') ||
-                 (tagLower === 'indisponível' && item.status === 'unavailable');
+          return (
+            item.title?.toLowerCase().includes(tagLower) ||
+            item.description?.toLowerCase().includes(tagLower) ||
+            item.status?.toLowerCase().includes(tagLower) ||
+            (tagLower === "disponível" && item.status === "available") ||
+            (tagLower === "reservado" && item.status === "reserved") ||
+            (tagLower === "entregue" && item.status === "delivered") ||
+            (tagLower === "indisponível" && item.status === "unavailable")
+          );
         });
 
-      const matchesStatus = !showOnlyAvailable || item.status === 'available';
+      const matchesStatus = !showOnlyAvailable || item.status === "available";
 
       return matchesSearch && matchesTags && matchesStatus;
     });
@@ -108,9 +125,9 @@ export const FilteredList = ({
             />
           </View>
         </View>
-        
+
         <View style={styles.tagsContainer}>
-          {activeFilters.map(tag => (
+          {activeFilters.map((tag) => (
             <Tag
               key={`active-${tag}`}
               label={tag}
@@ -146,11 +163,11 @@ export const FilteredList = ({
         subtitle="Selecione as tags para filtrar as doações"
       >
         <View style={styles.modalTagsContainer}>
-          {allAvailableTags.map(tag => (
+          {allAvailableTags.map((tag) => (
             <Tag
               key={tag}
               label={tag}
-              variant={selectedTags.includes(tag) ? 'default' : 'success'}
+              variant={selectedTags.includes(tag) ? "default" : "success"}
               onPress={() => handleTagToggle(tag)}
             />
           ))}

@@ -1,54 +1,54 @@
-import { StyleSheet } from 'react-native';
-import { theme } from '../../theme';
+import { StyleSheet } from "react-native";
+import { theme } from "../../theme";
 
 export const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    width: "100%",
   },
   containerVertical: {
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   stepsContainer: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    alignItems: "flex-start",
+    justifyContent: "space-between",
     paddingHorizontal: theme.spacing.sm,
   },
   stepsContainerVertical: {
-    flexDirection: 'column',
+    flexDirection: "column",
     flex: 1,
     paddingVertical: theme.spacing.md,
   },
   stepWrapper: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: "center",
     minWidth: 60,
   },
   stepWrapperVertical: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
+    flexDirection: "row",
+    alignItems: "flex-start",
     marginBottom: theme.spacing.lg,
     minHeight: 60,
   },
   stepContainer: {
-    alignItems: 'center',
+    alignItems: "center",
     flex: 1,
   },
   stepContent: {
-    alignItems: 'center',
-    flexDirection: 'column',
+    alignItems: "center",
+    flexDirection: "column",
   },
   stepContentVertical: {
-    alignItems: 'flex-start',
-    flexDirection: 'row',
+    alignItems: "flex-start",
+    flexDirection: "row",
     flex: 1,
   },
   stepCircle: {
     width: 24,
     height: 24,
     borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     marginBottom: theme.spacing.xs,
   },
   stepCircleVertical: {
@@ -61,23 +61,23 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fontFamily.body,
   },
   stepTextContainer: {
-    alignItems: 'center',
+    alignItems: "center",
     maxWidth: 80,
   },
   stepTextContainerVertical: {
-    alignItems: 'flex-start',
-    maxWidth: 'none',
+    alignItems: "flex-start",
+    maxWidth: undefined,
     flex: 1,
   },
   stepTitle: {
     fontSize: theme.fontSize.xs,
     fontWeight: theme.fontWeight.medium,
     fontFamily: theme.fontFamily.body,
-    textAlign: 'center',
+    textAlign: "center",
     marginBottom: 2,
   },
   stepTitleVertical: {
-    textAlign: 'left',
+    textAlign: "left",
     fontSize: theme.fontSize.sm,
     marginBottom: theme.spacing.xs,
   },
@@ -85,22 +85,22 @@ export const styles = StyleSheet.create({
     fontSize: 10,
     fontFamily: theme.fontFamily.body,
     lineHeight: 12,
-    textAlign: 'center',
+    textAlign: "center",
   },
   stepDescriptionVertical: {
-    textAlign: 'left',
+    textAlign: "left",
     fontSize: theme.fontSize.xs,
     lineHeight: 16,
   },
   stepContentContainer: {
     marginTop: theme.spacing.md,
-    width: '100%',
+    width: "100%",
     paddingHorizontal: theme.spacing.md,
   },
   navigationContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     marginTop: theme.spacing.lg,
     paddingHorizontal: theme.spacing.md,
     gap: theme.spacing.md,
@@ -144,7 +144,7 @@ export const stepStyles = {
   },
   inactive: {
     circle: {
-      backgroundColor: 'transparent',
+      backgroundColor: "transparent",
       borderWidth: 2,
       borderColor: theme.colors.border,
     },
@@ -177,4 +177,3 @@ export const stepStyles = {
     },
   },
 };
-
