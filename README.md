@@ -9,7 +9,7 @@
 
 (Work in progress)
 
-Serene UI is a lightweight and versatile design system built for sustentable applications using React-Native. It emphasizes simplicity, intuitive components, and warm, inviting colors that foster human connection and engagement. Designed for reuse across multiple projects, Serene UI helps developers create cohesive, approachable, and friendly interfaces with ease.
+Serene UI is a lightweight and versatile design system built for sustainable applications using React-Native. It emphasizes simplicity, intuitive components, and warm, inviting colors that foster human connection and engagement. Designed for reuse across multiple projects, Serene UI helps developers create cohesive, approachable, and friendly interfaces with ease.
 
 ## Installation
 
