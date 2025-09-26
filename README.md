@@ -1,6 +1,6 @@
 # Serene UI
 
-[![npm version](https://badge.fury.io/js/serene-ui.png?icon=si%3Anpm)](https://badge.fury.io/js/serene-ui)(https://img.shields.io/npm/dy/serene-ui)
+[![npm version](https://badge.fury.io/js/serene-ui.png?icon=si%3Anpm)](https://badge.fury.io/js/serene-ui)![NPM Downloads](https://img.shields.io/npm/dy/serene-ui)
 
 Serene UI is a lightweight and versatile design system built for sustentable applications using React-Native. It emphasizes simplicity, intuitive components, and warm, inviting colors that foster human connection and engagement. Designed for reuse across multiple projects, Serene UI helps developers create cohesive, approachable, and friendly interfaces with ease.
 
