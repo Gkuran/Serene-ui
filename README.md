@@ -1,9 +1,7 @@
 # Serene UI
 
 <p align="center">
-  <a href="https://badge.fury.io/js/serene-ui">
-    <img src="https://badge.fury.io/js/serene-ui.svg" alt="npm version" />
-  </a>
+   <img src="https://badge.fury.io/js/serene-ui.svg" alt="npm version"  />
   <img src="https://img.shields.io/npm/dm/serene-ui" alt="npm downloads" />
   <img src="https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg" alt="sb badge" />
 </p>
